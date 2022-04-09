@@ -1,5 +1,47 @@
-$body-color: gainsboro;
+*, *::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$body-color: linear-gradient(rgba(12, 122, 100), rgba(48, 32, 72));
+$flex-display: flex;
 
 body {
-    background-color: $body-color;
+    display: $flex-display;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: $body-color;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.location, .temperature {
+    display: $flex-display;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+}
+
+.temperature {
+    flex-direction: column;
+}
+
+.temperature___section {
+    display: $flex-display;
+    align-items: center;
+}
+
+.temperature___section span {
+    font-size: 40px;
+    margin:10px;
+}
+
+.temperature___section h2 {
+    font-size: 50px;
 }
