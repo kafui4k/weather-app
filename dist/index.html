@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <script src="../src/skycons.js"></script>
     <script src="./main.js" defer></script>
 </head>
 <body>
     <div class="location">
-        <div class="location___timezone">Timezone</div>
+        <div class="location___timezone"></div>
         Icon
     </div>
     <div class="temperature">
         <div class="temperature___section">
-            <h2 class="temperature___section___degree">233</h2>
-            <span>C</span>
+            <h2 class="temperature___section___degree"></h2>
+            <span></span>
         </div>
-        <div class="temperature___section___description">Sunny</div>
+        <div class="temperature___section___details">
+            <p class="temperature___section___details___feels-like"></p>
+            <p class="temperature___section___details___wind-mph"></p>
+            <p class="temperature___section___details___humidity"></p>
+        </div>
+        <div class="temperature___section___description"></div>
     </div>
 </body>
 </html>

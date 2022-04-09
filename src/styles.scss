@@ -25,7 +25,14 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 30vh;
-    width: 100%;
+    width: 50%;
+}
+
+.location___timezone {
+    font-size: 50px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(12, 122, 100);
 }
 
 .temperature {
@@ -44,4 +51,13 @@ body {
 
 .temperature___section h2 {
     font-size: 50px;
+}
+
+.temperature___section___details {
+    display: $flex-display;
+}
+
+.temperature___section___details p {
+    padding: 10px;
+    align-items: center;
 }
