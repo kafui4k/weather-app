@@ -20,6 +20,47 @@ body {
     color: white;
 }
 
+.search {
+    display: $flex-display;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 16px;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(32, 90, 90);
+}
+
+.search___form {
+    display: $flex-display;
+    flex-direction: column;
+}
+
+.search___form input{
+    height: 30px;
+    width: auto;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.search___form input:focus {
+    height: 30px;
+    width: auto;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.search___form___error {
+    display: none;
+}
+
+.search___form___error.active {
+    display: block;
+    color: rosybrown;
+    text-align: center;
+}
+
 .location, .temperature {
     display: $flex-display;
     justify-content: space-around;
