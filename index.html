@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <script src="../src/skycons.js"></script>
     <script src="./main.js" defer></script>
 </head>
 <body>
+    <div class="search">
+        <form class="search___form" novalidate>
+            <input type="search" name="search" id="search" search-city-name-data required autocomplete="off"/>
+            <span class="search___form___error" aria-live="polite">error</span>
+        </form>
+    </div>
     <div class="location">
         <div class="location___timezone"></div>
         Icon
