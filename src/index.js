@@ -11,6 +11,10 @@ window.addEventListener('load', function() {
     const temperature___section___details___humidity = document.querySelector(".temperature___section___details___humidity");
     const temperature___section___details___wind_mph = document.querySelector(".temperature___section___details___wind-mph");
 
+    var icon = new Skycons({"color": "pink"});
+    // icon.set('icon', 'clear-day');
+    // icon.play()
+
     let lat;
     let lng;
 
@@ -26,7 +30,6 @@ window.addEventListener('load', function() {
                 return dataRensponse.json();
             })
             .then((data) => {
-                // console.log(data);
                 // fetch all data variables here
                 location___timezone.innerText = data.name + ", " + data.sys.country;
                 const {feels_like, humidity, pressure, temp} = data.main;
@@ -38,8 +41,13 @@ window.addEventListener('load', function() {
                     const {description, icon, main} = weatherData;
                     temperature___section___description.innerText = main + " | " + description;
                     
-                })
-
+                })              
+                icon.set('icon', 'PARTLY_CLOUDY_NIGHT')
+                // icon.add(document.getElementById("icon"), "PARTLY_CLOUDY_NIGHT");
+                icon.play()
+            })
+            .catch(err => {
+                alert('ERROR: fetching data... ', err);
             })
     }
 
@@ -75,8 +83,14 @@ window.addEventListener('load', function() {
                 data.weather.map(weatherData => {
                     const {description, icon, main} = weatherData;
                     temperature___section___description.innerText = main + " | " + description;
-                    
                 })
+                icon.remove(document.getElementById("icon"));
+                icon.set('icon', 'RAIN')
+                // icon.add(document.getElementById("icon"), "RAIN");
+                icon.play()
+            })
+            .catch(err => {
+                alert('ERROR: fetching data... ', err);
             })
     }
 
