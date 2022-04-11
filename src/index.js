@@ -10,6 +10,7 @@ window.addEventListener('load', function() {
     const temperature___section___details___feels_like = document.querySelector(".temperature___section___details___feels-like");
     const temperature___section___details___humidity = document.querySelector(".temperature___section___details___humidity");
     const temperature___section___details___wind_mph = document.querySelector(".temperature___section___details___wind-mph");
+    const temperature___section___degree_default = document.querySelector(".temperature___section___degree_-default");
 
     var icon = new Skycons({"color": "pink"});
     // icon.set('icon', 'clear-day');
@@ -36,7 +37,7 @@ window.addEventListener('load', function() {
                 temperature___section___details___feels_like.innerText = `FEELS LIKE: ${feels_like}`;
                 temperature___section___details___humidity.innerText = `HUMIDITY: ${humidity}%`;
                 temperature___section___details___wind_mph.innerText = `WIND: ${data.wind.speed} MPH`
-                temperature___section___degree.innerText = temp;
+                temperature___section___degree.innerText = (temp - 273.15).toFixed(); // converting Kelvin to Fh
                 data.weather.map(weatherData => {
                     const {description, icon, main} = weatherData;
                     temperature___section___description.innerText = main + " | " + description;
@@ -79,7 +80,7 @@ window.addEventListener('load', function() {
                 temperature___section___details___feels_like.innerText = `FEELS LIKE: ${feels_like}`;
                 temperature___section___details___humidity.innerText = `HUMIDITY: ${humidity}%`;
                 temperature___section___details___wind_mph.innerText = `WIND: ${data.wind.speed} MPH`
-                temperature___section___degree.innerText = temp;
+                temperature___section___degree.innerText = (temp - 273.15).toFixed();
                 data.weather.map(weatherData => {
                     const {description, icon, main} = weatherData;
                     temperature___section___description.innerText = main + " | " + description;
