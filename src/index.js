@@ -49,6 +49,8 @@ window.addEventListener('load', function() {
                     icon.set('icon', 'PARTLY_CLOUDY_DAY')
                 } else if (weatherType === "light rain") {
                     icon.set('icon', 'RAIN')
+                } else if (weatherType === "clear sky") {
+                    icon.set('icon', 'CLEAR_DAY')
                 }
                 // icon.add(document.getElementById("icon"), "PARTLY_CLOUDY_NIGHT");
                 icon.play()
@@ -100,6 +102,8 @@ window.addEventListener('load', function() {
                     icon.set('icon', 'CLOUDY')
                 } else if (weatherType === "light rain") {
                     icon.set('icon', 'RAIN')
+                } else if (weatherType === "clear sky") {
+                    icon.set('icon', 'CLEAR_DAY')
                 }
                 icon.play()
             })
