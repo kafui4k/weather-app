@@ -18,6 +18,7 @@ window.addEventListener('load', function() {
 
     let lat;
     let lng;
+    let weatherType;
 
     function success(position) {
 
@@ -41,11 +42,17 @@ window.addEventListener('load', function() {
                 data.weather.map(weatherData => {
                     const {description, icon, main} = weatherData;
                     temperature___section___description.innerText = main + " | " + description;
-                    
-                })              
-                icon.set('icon', 'PARTLY_CLOUDY_NIGHT')
+                    weatherType = description;
+                });
+
+                if (weatherType === "few clouds" || weatherType === "broken clouds") {
+                    icon.set('icon', 'PARTLY_CLOUDY_DAY')
+                } else if (weatherType === "light rain") {
+                    icon.set('icon', 'RAIN')
+                }
                 // icon.add(document.getElementById("icon"), "PARTLY_CLOUDY_NIGHT");
                 icon.play()
+
             })
             .catch(err => {
                 alert('ERROR: fetching data... ', err);
@@ -84,10 +91,16 @@ window.addEventListener('load', function() {
                 data.weather.map(weatherData => {
                     const {description, icon, main} = weatherData;
                     temperature___section___description.innerText = main + " | " + description;
-                })
+                    weatherType = description;
+                });
+
                 icon.remove(document.getElementById("icon"));
-                icon.set('icon', 'RAIN')
-                // icon.add(document.getElementById("icon"), "RAIN");
+
+                if (weatherType === "overcast clouds") {
+                    icon.set('icon', 'CLOUDY')
+                } else if (weatherType === "light rain") {
+                    icon.set('icon', 'RAIN')
+                }
                 icon.play()
             })
             .catch(err => {
