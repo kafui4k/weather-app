@@ -47,7 +47,7 @@ window.addEventListener('load', function() {
 
                 if (weatherType === "few clouds" || weatherType === "broken clouds") {
                     icon.set('icon', 'PARTLY_CLOUDY_DAY')
-                } else if (weatherType === "light rain") {
+                } else if (weatherType === "light rain" || weatherType === "moderate rain") {
                     icon.set('icon', 'RAIN')
                 } else if (weatherType === "clear sky") {
                     icon.set('icon', 'CLEAR_DAY')
@@ -100,7 +100,7 @@ window.addEventListener('load', function() {
 
                 if (weatherType === "overcast clouds") {
                     icon.set('icon', 'CLOUDY')
-                } else if (weatherType === "light rain") {
+                } else if (weatherType === "light rain" || weatherType === "moderate rain") {
                     icon.set('icon', 'RAIN')
                 } else if (weatherType === "clear sky") {
                     icon.set('icon', 'CLEAR_DAY')
