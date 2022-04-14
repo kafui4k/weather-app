@@ -17,5 +17,5 @@
 - Fetch API
 
 ### Resources
-- Icons (Weather Icons) from [Skycons](https://www.svgrepo.com/).
-- Open Weather Map - API
+- Icons (Weather Icons) from [Skycons](https://darkskyapp.github.io/skycons/).
+- Weather API from [openweathermap] - (https://openweathermap.org/current)
